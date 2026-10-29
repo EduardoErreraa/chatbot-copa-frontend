@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#063b2b">
+  <meta name="description" content="Converse com o Central da Copa, seu assistente sobre a Copa do Mundo.">
+  <title>Central da Copa | Chatbot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="ball" aria-hidden="true">⚽</div>
+      <p class="eyebrow">SEU GUIA DO MUNDIAL</p>
+      <h1>Central <span>da Copa</span></h1>
+      <p class="subtitle">Pergunte sobre seleções, regras, história e curiosidades da Copa do Mundo.</p>
+    </header>
+    <section class="chat-card" aria-label="Chat da Central da Copa">
+      <div class="chat-header">
+        <div class="status-dot" aria-hidden="true"></div>
+        <div><strong>Assistente da Copa</strong><p>Pronto para conversar</p></div>
+      </div>
+      <div id="chat-messages" class="messages" aria-live="polite" aria-relevant="additions">
+        <div class="message bot-message">
+          <div class="avatar" aria-hidden="true">⚽</div>
+          <div class="bubble">Olá! Sou o Central da Copa. O que você quer saber sobre o Mundial?</div>
+        </div>
+      </div>
+      <div class="suggestions" aria-label="Sugestões de perguntas">
+        <button type="button" class="suggestion">Quantas Copas o Brasil ganhou?</button>
+        <button type="button" class="suggestion">Como funciona a fase de grupos?</button>
+        <button type="button" class="suggestion">Conte uma curiosidade da Copa</button>
+      </div>
+      <form id="chat-form" class="composer">
+        <label class="sr-only" for="message-input">Sua pergunta</label>
+        <textarea id="message-input" name="message" rows="1" maxlength="4000" placeholder="Digite sua pergunta..." required></textarea>
+        <button id="send-button" type="submit" aria-label="Enviar mensagem"><span>Enviar</span><span aria-hidden="true">➤</span></button>
+      </form>
+      <p class="disclaimer">As respostas podem conter imprecisões. Confira informações atuais em fontes oficiais.</p>
+    </section>
+    <footer>Feito para quem vive a paixão pela Copa. <span>⚽</span></footer>
+  </main>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
